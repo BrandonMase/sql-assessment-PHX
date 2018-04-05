@@ -11,18 +11,13 @@ DROP TABLE IF EXISTS users CASCADE;
 -- name   should be a string
 -- email  should be a string
 
-CREATE TABLE IF NOT EXISTS users (
-  id --(add datatype and/or table contraint),
-  name --(add datatype and/or table contraint),
-  email --(add datatype and/or table contraint)
-);
+CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY,name TEXT,email TEXT);
 
 -- === INSERT STATEMENT ===============
 
 -- Complete the first part of the insert statement below. The values below need to be inserted into the 'users' table.
 
-
-VALUES
+INSERT INTO users (name,email) VALUES
 ('John Smith', 'john@smith.com'),
 ('Dave Davis', 'dave@davis.com'),
 ('Jane Janis', 'jane@janis.com');
